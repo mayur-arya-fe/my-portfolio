@@ -43,7 +43,7 @@ export const ProjectCard = ({
       <h4 className="font-medium text-violet-600 dark:text-violet-400 mb-2">
         Key Challenges
       </h4>
-      <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
+      <ul className="list-disc list-outside pl-6 text-gray-700 dark:text-gray-300 mt-3 space-y-2 leading-relaxed">
         {challenges.map((c, i) => (
           <li key={i}>{c}</li>
         ))}
@@ -54,7 +54,7 @@ export const ProjectCard = ({
       <h4 className="font-medium text-violet-600 dark:text-violet-400 mb-2">
         Impact & Results
       </h4>
-      <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
+      <ul className="list-disc list-outside pl-6 text-gray-700 dark:text-gray-300 mt-3 space-y-2 leading-relaxed">
         {impact.map((i, index) => (
           <li key={index}>{i}</li>
         ))}
