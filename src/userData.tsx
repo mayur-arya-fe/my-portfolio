@@ -171,86 +171,106 @@ export const softSkills = [
   "Client Communication",
 ];
 
-export const achievements = [
-  {
-    type: "Award",
-    title: "Quality Assurance Excellence Award",
-    issuer: "Optimus Information",
-    year: "2023",
-    image: "/exhibits/qa-excellence.webp",
-  },
-  {
-    type: "Award",
-    title: "Best Overtake Award",
-    issuer: "Optimus Information",
-    year: "2023",
-    image: "/exhibits/overtake.webp",
-  },
-  {
-    type: "Award",
-    title: "Performer of the Month",
-    issuer: "Optimus Information",
-    year: "Oct 2021",
-    image: "/exhibits/pom-oct-2021.png",
-  },
-  {
-    type: "Award",
-    title: "Performer of the Month",
-    issuer: "Optimus Information",
-    year: "Nov 2022",
-    image: "/exhibits/pom-nov-2022.jpeg",
-  },
-  {
-    type: "Award",
-    title: "Performer of the Month",
-    issuer: "Optimus Information",
-    year: "Apr 2021",
-    image: "/exhibits/pom-apr-2021.png",
-  },
-  {
-    type: "Award",
-    title: "Performer of the Month",
-    issuer: "Optimus Information",
-    year: "May 2020",
-    image: "/exhibits/pom-may-2020.png",
-  },
-  {
-    type: "Award",
-    title: "Performer of the Month",
-    issuer: "Optimus Information",
-    year: "Aug 2020",
-    image: "/exhibits/pom-aug-2020.png",
-  },
-  {
-    type: "Certification",
-    title: "NFR Compliance Certificate",
-    issuer: "Optimus Information",
-    year: "2024",
-    image: "/exhibits/nfr-cert.png",
-  },
-  {
-    type: "Contribution",
-    title: "Hackathon Contributor – Team Next Gen Nexus",
-    issuer: "Publicis Sapient",
-    year: "2023",
-    description:
-      "Built an AI-driven project showcased in internal innovation hackathon.",
-    image: "/exhibits/gen-ai.png",
-  },
-  {
-    type: "Contribution",
-    title: "React Interviewer",
-    issuer: "Publicis Sapient",
-    year: "2024",
-    description:
-      "Led frontend interview panels evaluating design and problem-solving skills.",
-  },
-  {
-    type: "Contribution",
-    title: "Toastmasters Member",
-    issuer: "Toastmasters International",
-    year: "2024",
-    description:
-      "Focused on leadership and communication skills through regular meetups.",
-  },
-];
+export const achievements = {
+  awards: [
+    {
+      type: "Award",
+      title: "Quality Assurance Excellence Award",
+      issuer: "Optimus Information",
+      year: "2023",
+      image: "/exhibits/qa-excellence.webp",
+    },
+    {
+      type: "Award",
+      title: "Best Overtake Award",
+      issuer: "Optimus Information",
+      year: "2023",
+      image: "/exhibits/overtake.webp",
+    },
+    {
+      type: "Award",
+      title: "Performer of the Month",
+      issuer: "Optimus Information",
+      year: "Oct 2021",
+      image: "/exhibits/pom-oct-2021.png",
+    },
+    {
+      type: "Award",
+      title: "Performer of the Month",
+      issuer: "Optimus Information",
+      year: "Nov 2022",
+      image: "/exhibits/pom-nov-2022.jpeg",
+    },
+    {
+      type: "Award",
+      title: "Performer of the Month",
+      issuer: "Optimus Information",
+      year: "Apr 2021",
+      image: "/exhibits/pom-apr-2021.png",
+    },
+    {
+      type: "Award",
+      title: "Performer of the Month",
+      issuer: "Optimus Information",
+      year: "May 2020",
+      image: "/exhibits/pom-may-2020.png",
+    },
+    {
+      type: "Award",
+      title: "Performer of the Month",
+      issuer: "Optimus Information",
+      year: "Aug 2020",
+      image: "/exhibits/pom-aug-2020.png",
+    },
+  ],
+  certifications: [
+    {
+      type: "Certification",
+      title: "NFR Compliance Certificate",
+      issuer: "Optimus Information",
+      year: "Dec 2024",
+      image: "/exhibits/nfr-cert.png",
+    },
+    {
+      type: "Certification",
+      title: "Generative AI Fundamentals",
+      issuer: "Publicis Sapient",
+      year: "Dec 2024",
+      image: "/exhibits/gen-ai.png",
+    },
+    {
+      type: "Certification",
+      title: "AZ-900: Microsoft Azure Fundamentals",
+      issuer: "Microsoft",
+      year: "May 2022",
+      image: "/exhibits/az-900.png",
+    },
+  ],
+  contributions: [
+    {
+      type: "Contribution",
+      title: "Aspire Speed Hackathon Participant - Team Next Gen Nexus",
+      issuer: "Publicis Sapient",
+      year: "2025",
+      description:
+        "Built an AI-driven project showcased in internal innovation hackathon.",
+      image: "/exhibits/hackathon.jpg",
+    },
+    {
+      type: "Contribution",
+      title: "React Interviewer",
+      issuer: "Publicis Sapient | Optimus Information Inc.",
+      year: "Present",
+      description:
+        "Led frontend interview panels evaluating design and problem-solving skills.",
+    },
+    {
+      type: "Contribution",
+      title: "Toastmasters Member",
+      issuer: "Toastmasters International - Optimus Information",
+      year: "2024",
+      description:
+        "Focused on leadership and communication skills through regular meetups.",
+    },
+  ],
+};

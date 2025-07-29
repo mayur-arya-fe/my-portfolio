@@ -28,6 +28,8 @@ export const Education = () => {
         <p className="text-violet-500 dark:text-violet-400 font-medium">
           Amity University Rajasthan
         </p>
+        <p className="text-gray-500 dark:text-gray-400 mt-2">Minor in Management</p>
+        <p className="text-gray-500 dark:text-gray-400 mt-2">Certificate in French</p>
         <p className="text-gray-500 dark:text-gray-400 mt-2">2015 - 2019</p>
         <p className="text-gray-500 dark:text-gray-400 mt-2">7.8 CGPA</p>
       </motion.div>

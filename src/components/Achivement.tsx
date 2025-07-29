@@ -13,9 +13,10 @@ export const Achievement = ({ item, idx }: AchievementProps) => {
 
   return (
     <>
-      <div
+      <motion.div
         key={idx}
-        className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md dark:shadow-none"
+        className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg shadow-indigo-100 dark:shadow-gray-900 hover:shadow-xl hover:shadow-indigo-200 dark:hover:shadow-gray-800 transition-all duration-300 my-4"
+        whileHover={{ scale: 1.02 }}
       >
         <div className="flex items-center gap-2 mb-2">
           {item.type === "Award" && (
@@ -49,8 +50,7 @@ export const Achievement = ({ item, idx }: AchievementProps) => {
             View Proof
           </button>
         )}
-      </div>
-
+      </motion.div>
       {/* Modal / Centered Popover */}
       <AnimatePresence>
         {showModal && item.image && (

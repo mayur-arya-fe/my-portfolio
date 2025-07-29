@@ -9,6 +9,7 @@ import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Summary } from "./components/Summary";
 import { Toaster } from "sonner";
+import {motion} from "framer-motion";
 
 function App() {
   return (
@@ -59,8 +60,35 @@ function App() {
         <WorkExperience />
         <Projects />
         <Achievements />
-        <Education />
-        <ContactMe />
+        <motion.div
+          className="flex flex-col md:flex-row justify-between gap-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ staggerChildren: 0.2 }}
+        >
+          <motion.div
+            className="md:w-1/2"
+            variants={{
+              hidden: { opacity: 0, x: -40 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            transition={{ duration: 0.5 }}
+          >
+            <Education />
+          </motion.div>
+
+          <motion.div
+            className="md:w-1/2"
+            variants={{
+              hidden: { opacity: 0, x: 40 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            transition={{ duration: 0.5 }}
+          >
+            <ContactMe />
+          </motion.div>
+        </motion.div>
       </main>
 
       <Footer />

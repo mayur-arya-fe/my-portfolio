@@ -17,13 +17,16 @@ export const ContactMe = () => {
     toast.loading("Sending your message...", { id: "send-status" });
 
     try {
-      const res = await fetch("https://formsubmit.co/ajax/mayurarya.webdev@gmail.com", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-        },
-        body: formData,
-      });
+      const res = await fetch(
+        "https://formsubmit.co/ajax/mayurarya.webdev@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+          },
+          body: formData,
+        }
+      );
 
       if (res.ok) {
         form.reset();
@@ -55,34 +58,41 @@ export const ContactMe = () => {
       <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg shadow-indigo-100 dark:shadow-gray-900">
         <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
           <input type="hidden" name="_captcha" value="false" />
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex-1">
+              <label className="block text-gray-700 dark:text-gray-300 mb-2">
+                Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                required
+                className="w-full px-4 py-2 rounded border border-gray-200 border-gray-700 bg-gray-100 dark:bg-gray-700 focus:ring-2 focus:ring-violet-500"
+              />
+            </div>
 
-          <div>
-            <label className="block text-gray-700 dark:text-gray-300 mb-2">Name</label>
-            <input
-              type="text"
-              name="name"
-              required
-              className="w-full px-4 py-2 rounded border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-700 focus:outline-none"
-            />
+            <div className="flex-1">
+              <label className="block text-gray-700 dark:text-gray-300 mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                required
+                className="w-full px-4 py-2 rounded border border-gray-200 border-gray-700 bg-gray-100 dark:bg-gray-700 focus:ring-2 focus:ring-violet-500"
+              />
+            </div>
           </div>
 
           <div>
-            <label className="block text-gray-700 dark:text-gray-300 mb-2">Email</label>
-            <input
-              type="email"
-              name="email"
-              required
-              className="w-full px-4 py-2 rounded border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-700 focus:outline-none"
-            />
-          </div>
-
-          <div>
-            <label className="block text-gray-700 dark:text-gray-300 mb-2">Message</label>
+            <label className="block text-gray-700 dark:text-gray-300 mb-2">
+              Message
+            </label>
             <textarea
               name="message"
               rows={4}
               required
-              className="w-full px-4 py-2 rounded border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-700 focus:outline-none"
+              className="w-full px-4 py-2 rounded border border-gray-200 border-gray-700 bg-gray-100 dark:bg-gray-700 focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
