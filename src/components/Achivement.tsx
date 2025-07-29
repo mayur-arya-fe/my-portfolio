@@ -1,4 +1,4 @@
-import { Award, BadgeCheck, Users, X } from "lucide-react";
+import { Award, BadgeCheck, Loader2, Users, X } from "lucide-react";
 import { AchievementItem } from "../types";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,6 +10,7 @@ export interface AchievementProps {
 
 export const Achievement = ({ item, idx }: AchievementProps) => {
   const [showModal, setShowModal] = useState(false);
+  const [isImageLoading, setIsImageLoading] = useState(true);
 
   return (
     <>
@@ -75,10 +76,19 @@ export const Achievement = ({ item, idx }: AchievementProps) => {
               >
                 <X size={20} className="text-gray-800 dark:text-gray-100" />
               </button>
+              {/* Loading Spinner */}
+              {isImageLoading && (
+                <div className="absolute inset-0 flex items-center justify-center bg-white/70 dark:bg-gray-800/70 z-10 rounded">
+                  <Loader2 className="animate-spin w-12 h-12 text-indigo-600 dark:text-indigo-300" />
+                </div>
+              )}
+
               <img
                 src={item.image}
                 alt={item.title}
                 className="max-h-[80vh] w-full object-contain rounded"
+                onLoad={() => setIsImageLoading(false)}
+                onError={() => setIsImageLoading(false)}
               />
             </motion.div>
           </motion.div>
